@@ -1,17 +1,8 @@
-const buttons = document.querySelectorAll('.button');
-const body = document.querySelector('body');
+const color= document.getElementById("color-picker")
 
 
-buttons.forEach((button)=>{
-button.addEventListener('click', (e)=>{
-  if (e.target.id==="Red") {
-     body.style.backgroundColor= e.target.id
-  }
-  if (e.target.id==="Orange") {
-     body.style.backgroundColor= e.target.id
-  }
-  if (e.target.id==="Blue") {
-     body.style.backgroundColor= e.target.id
-  }
-})
+color.addEventListener("input",()=>{
+   let finalColor = color.value
+   
+   document.body.style.backgroundColor= finalColor
 })
